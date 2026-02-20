@@ -37,3 +37,7 @@ if (process.env.NODE_ENV !== 'production') {
   const PORT = 3000;
   app.listen(PORT, () => console.log(`Server running on http://localhost:${PORT}`));
 }
+// เพิ่มตรงนี้เพื่อรับแขกที่หน้าแรก
+app.get('/', (req, res) => {
+  res.send('ยินดีต้อนรับสู่ Product API ของฉัน! กรุณาไปที่ /api/products เพื่อดูข้อมูล');
+});
